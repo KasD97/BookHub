@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKHUB</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Book <span>Hub</span></h1>
+        <button class="add-book">Add a book</button>
+    </header>
+
+    <main>
+        <div class="table display">
+            <div class="display-operations">
+                <div class="display-operations--sort">
+                    <span>Sort by: </span>
+                    <select name="sort-options" id="sort-options">
+                        <option value="all">all</option>
+                        <option value="a-z">a-z</option>
+                        <option value="z-a">z-a</option>
+                    </select>
+                        
+                </div>
+
+                <div class="display-operations--stats">
+                    <p >Total: <span class="total-num"> </span></p>
+                    <p >Read: <span class="read-num"> </span></p>
+                    <p >Not read: <span class="unread-num"></span></p>
+                </div>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Comment</th>
+                        <th>Read</th>   
+                        <th>Change status</th>
+                        <th>Edit details</th>
+                        <th>Remove from collection</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                </tbody>            
+            </table>
+        </div>
+
+        <div class="form hidden">
+            <h2>Add a book</h2>
+            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="genre" placeholder="Genre">
+            <input type="text" id="author" placeholder="Author">
+            <input type="number" id="pages" placeholder="Pages">
+            <input type="text" id="comment" placeholder="Comment">
+            
+            <fieldset role="radiogroup">
+                <legend>Read book?</legend>
+                <label for="yes"></label>
+                <input type="radio" id="yes" name="read" value="yes" checked>
+                <span>Yes</span>
+
+                <label for="no"></label>
+                <input type="radio" id="no" name="read" value="no">
+                <span>No</span>
+            </fieldset>
+            <div class="form-action--buttons">
+                <button class="submit">Submit</button>
+                <button class="return">Return</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="attribution">
+        Made with <span class="heart-emoji" style="color: red;"> &#9829 </span> by KASULE DAVID
+    </footer>
+    
+    <script src="sort.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+</html>
